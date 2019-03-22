@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    <!-- Line chart for Resurety -->
+  </h1>
+
+  <div class="jumbotron">
+    <h1 class="display-4">Wind Farm Hypothesis Test</h1>
+    <p class="lead">A hypothesis says that larger wind farms tend to be less efficient, since
+      they experience higher "wake loss". This can be tested by observing charts plotted for values from a dataset with information for wind farms in the US.</p>
+      <div class="dropdown show float-right" style="margin-right:2%">
+        <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Select Chart
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+          <a class="dropdown-item" href="#" (click)="toggle('ce')">Capacity vs Efficiency chart</a>
+          <a class="dropdown-item" href="#" (click)="toggle('cg')">Capacity vs Annuale Generation chart</a>
+        </div>
+      </div>
+  </div>
+
+  <app-scatterplot [hidden]="!ce"></app-scatterplot>
+  <app-scatterplot-gen-chart [hidden]="!cg"></app-scatterplot-gen-chart>
+  <router-outlet></router-outlet>
